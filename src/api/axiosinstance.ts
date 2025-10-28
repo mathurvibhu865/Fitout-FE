@@ -32,6 +32,7 @@ function attachAuthInterceptors(instance: AxiosInstance) {
     const authState = getAuthState();
     config.headers = config.headers ?? {};
 
+
     // Attach access token
     if (authState?.access_token) {
       (config.headers as any).Authorization = `Bearer ${authState.access_token}`;
@@ -97,3 +98,6 @@ attachAuthInterceptors(AccountInstance);
 attachAuthInterceptors(FitoutRequestInstance);
 
 export { AccountInstance, FitoutRequestInstance };
+
+
+

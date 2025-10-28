@@ -5,7 +5,7 @@ import Button from '../components/Button';
 import ToggleSwitch from '../components/ToggleSwitch';
 import { FiPlus, FiX, FiArrowRight } from 'react-icons/fi';
 import { 
-    createChecklist, 
+    createFitoutChecklist, 
     createChecklistQuestion, 
     getWorkCategories, 
     getSubCategories  
@@ -136,7 +136,7 @@ const AddChecklist: React.FC<AddChecklistProps> = ({ onBack, onCreated }) => {
                 
             };
 
-            const checklist = await createChecklist(checklistPayload);
+            const checklist = await createFitoutChecklist(checklistPayload);
 
             // Step 2: Add Question
             if (newQuestion && answerType) {

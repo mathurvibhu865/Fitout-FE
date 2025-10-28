@@ -86,6 +86,7 @@ const AddFitoutRequestForm: React.FC<AddFitoutRequestFormProps> = ({
     const formData = new FormData();
     formData.append("user_id", String(selectedUser));
     formData.append("description", description);
+    formData.append("flour", flour);
     formData.append("contractor_name", contractorName);
     formData.append("contractor_mobile", contractorMobile);
     formData.append("requested_date", new Date(requestedDate).toISOString());
